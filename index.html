@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Roboto", sans-serif;
+                list-style: none;
+                text-decoration: none;
+            }
+            .sidebar {
+                position: fixed;
+                left: -14rem;
+                width: 14rem;
+                height: 100vh;
+                background: rgb(1, 77, 66);
+            }
+            .sidebar_header {
+                font-size: 1.2rem;
+                color: white;
+                padding-left: 1.5rem;
+                line-height: 5.5rem;
+                background-color: rgb(12, 88, 107);
+                user-select: none;
+            }
+            .sidebar ul a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                line-height: 3rem;
+                font-size: 1.1rem;
+                color: white;
+                padding-left: 1.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgb(53, 47, 75);
+                transition: 0.4s;
+            }
+            .sidebar li:hover a {
+                padding-left: 2.5rem;
+            }
+            .sidebar i {
+                margin-right: 0.5rem;
+            }
+            #sidebar_checkbox {
+                display: none;
+            }
+            label #burger_btn,
+            label #cancel_btn {
+                position: absolute;
+                cursor: pointer;
+                background: rgb(12, 88, 107);
+                border-radius: 0.2rem;
+                font-size: 2rem;
+                top: 1.5rem;
+            }
+            label #cancel_btn {
+                top: 2rem;
+                font-size: 1rem;
+                /* border: 0.5px solid white; */
+            }
+            label #burger_btn {
+                left: 3rem;
+                color: white;
+                padding: 6px 12px;
+                transition: all 0.5s;
+            }
+            label #cancel_btn {
+                left: -3rem;
+                z-index: 2;
+                color: white;
+                padding: 6px 12px;
+                transition: all 1s;
+            }
+            #sidebar_checkbox:checked ~ .sidebar {
+                left: 0;
+                transition: all 1s;
+            }
+            #sidebar_checkbox:not(checked) ~ .sidebar {
+                transition: all 1s;
+            }
+            #sidebar_checkbox:checked ~ label #burger_btn {
+                left: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+            #sidebar_checkbox:checked ~ label #cancel_btn {
+                left: 11rem;
+            }
+            section {
+                background: url("115007.jpg");
+                background-position: center;
+                background-size: cover;
+                height: 100vh;
+                transition: all 1s;
+                text-align: center; 
+                vertical-align: middle;
+            }
+            #sidebar_checkbox:checked ~ section {
+                margin-left: 14rem;
+            }
+            
+            #all{
+    width:100%;
+    float:left;
+    text-align:center;
+}
+
+  .text{
+  display: box;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0 0 0 27rem;
+  width: 40%;
+  height: 60vh;
+  background-color: cadetblue;
+
+}
+
+.text > div {
+  background-color: #0fb6e9;
+  width: 40px;
+  margin: 27rem;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  align-items: center
+}
+h3 {align-items: flex-end;}
+
+        </style>
+        <input type="checkbox" id="sidebar_checkbox" />
+        <label for="sidebar_checkbox">
+            <i class="fas fa-bars" id="burger_btn"></i>
+            <i class="fas fa-times" id="cancel_btn"></i>
+        </label>
+        <div class="sidebar">
+            <div class="sidebar_header">My Page</div>
+            <ul>
+                <li>
+                    <a href="index.html"><i class="fas fa-qrcode"></i>About Me</a>
+                </li>
+                <li>
+                <li>
+                    <a href="my_projects.html"><i class="fas fa-qrcode"></i>My Projects</a>
+                </li>
+                <li>
+                    <a href="contacts.html"><i class="fas fa-link"></i>Contacts</a>
+                </li>
+            </ul>
+        </div>
+        <section> 
+            <div class="text">
+                <br>
+                <br>
+                <h2>Below is a list of ways I can be reached</h2>
+                <br>
+                <br>
+                <ul>
+                  <li><b>EMAIL:</b> ta2lissz@gmail.com</li>
+                  <br>
+                  <li><b>PHONE:</b> +370 654 45323</li>
+                  <br>
+                  <br>
+                  <h2>Social Media</h2>
+                <br>
+                <br>
+                <ul>
+                  <li><a href="https://lt.linkedin.com/in/tadas-gruodis-64ba31171"> <b>LinkedIn:</b></a></li>
+                  <br>
+                  <li><a href="https://www.facebook.com/tadas.gruodis"> <b>Facebook</b></a></li>
+                  <br>
+                  <li><a href="https://github.com/JoeGru/joegru.github.io"> <b>GitHub</b></a></li>
+                </ul>
+            </div>
+        </section>
+    </body>
+</html>
